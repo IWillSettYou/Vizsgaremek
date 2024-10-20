@@ -1,1 +1,76 @@
-https://mermaid.live/edit#pako:eNqNVNtuozAQ_RXLz2lEIQ6Et6pRparbbaS2LyteHDwNVsHO2qa72ST_vubmQDaXRTwwF585czzMFqeSAY4xqDmnK0WLRCTiXYPaJgLZpyw5Q_ZdPDW2NoqLFRK0gIEjozoDtvjFBl4oKM8bDxcGrUEVXGsuRQ5f0Abm1MAbLwClCuwnuzNH_nLNOv--YndAeQVjbBm9PZT4lypNjU09ZCj4WXJluTqYbxUZ1KK_0WUOpwEr01Th72WxBNWdWNBNAcI8g8kku0ilUq07dW97Wkm1uXqgzX80UPxHrpNa8bRnpm21R4Yenhxvzq40WqejXo4l0UKcKNQj8vJxX2ojC1C9zL5OPRR30WtLyN3yi2JuCC_SO8tuKWUOVCCu51LAUS1ZwfeGSoGd-S9gF67_pM6iHoVDu_o8RVe7q3Vn0JnIuzDcTWStxH53c7PbVUMQp1IYyoUeRGrevVB1udciR2iV2QS62ewFB_pcAx78ES4Dj7AVyG4EZvdNLXGCTQZWTRzbT0bVZ4JtzzaPlka-bkSKY6NKGGEly1WG4w-aa2s1C6HdV867pgLHW_wbx7PJmJAw8khIptMoIiO8wbE_IePZLPSjYOLfkoAE4X6E_0hpAbxxGE09MiNBcOt5M9_3a7QfdbAhAIwbqZ6bXVmvzP1fUb3H5Q
+```mermaid
+  erDiagram
+
+User{
+    uuid id PK
+    string name
+    string hashedPwd
+    string email
+    int permissionlevel
+    DateTime createdAt
+    DateTime updatedAt
+}
+
+permissionSettings{
+    int id PK
+    string action
+    int requiredPermissionLevel 
+}
+
+Table{
+    int id PK
+    int tableNumber 
+}
+
+PaymentMethod{
+    int id PK
+    string name 
+}
+
+Category{
+    int id PK
+    string name
+}
+
+Item{
+    int id PK
+    string name
+    int price
+    int categoryId FK
+}
+
+Paid{
+    int id PK
+    int tableId FK 
+    int itemId FK
+    int price
+    string nameOfCustomer
+    int paymentMethodId FK
+    DateTime paidAt
+}
+
+Order{
+    int id PK
+    int tableId FK
+    int itemId FK
+    boolean isDone
+    DateTime orderedAt
+}
+
+reservedTable{
+    int id PK
+    string name
+    int numberOfCustomers
+    int tableId FK
+    DateTime reservedAt 
+    DateTime reservedUntil 
+}
+
+Order}|--||Item:contains
+Order}|--||Table:contains
+Paid}|--||Table:contains
+Paid}|--||Item:contains
+Item}|--||Category:contains
+reservedTable}|--||Table:contains
+Paid}|--||PaymentMethod:contains
+```

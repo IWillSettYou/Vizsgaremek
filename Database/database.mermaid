@@ -53,7 +53,7 @@ Order{
     DateTime orderedAt
 }
 
-reservedTable{
+ReservedTable{
     int id PK
     string name
     int numberOfCustomers
@@ -62,11 +62,19 @@ reservedTable{
     DateTime reservedUntil 
 }
 
+Sessions{
+    int id PK
+    int userId FK
+    int ip
+    DateTime expires
+}
+
 Order}|--||Item:contains
 Order}|--||Tables:contains
 Paid}|--||Tables:contains
 Paid}|--||Item:contains
 Item}|--||Category:contains
-reservedTable}|--||Tables:contains
+ReservedTable}|--||Tables:contains
 Paid}|--||PaymentMethods:contains
 User}|--||permissionSettings:allows
+User||--||Sessions:allows

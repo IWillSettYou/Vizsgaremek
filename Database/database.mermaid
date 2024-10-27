@@ -4,7 +4,7 @@ User{
     uuid id PK
     string name
     string hashedPwd
-    string email
+    string email UK
     int permissionlevel
     DateTime createdAt
     DateTime updatedAt
@@ -12,16 +12,15 @@ User{
 
 permissionSettings{
     int id PK
-    string action
-    int requiredPermissionLevel 
+    string section
 }
 
-Table{
+Tables{
     int id PK
-    int tableNumber 
+    int tableNumber UK
 }
 
-PaymentMethod{
+PaymentMethods{
     int id PK
     string name 
 }
@@ -42,8 +41,6 @@ Paid{
     int id PK
     int tableId FK 
     int itemId FK
-    int price
-    string nameOfCustomer
     int paymentMethodId FK
     DateTime paidAt
 }
@@ -66,10 +63,10 @@ reservedTable{
 }
 
 Order}|--||Item:contains
-Order}|--||Table:contains
-Paid}|--||Table:contains
+Order}|--||Tables:contains
+Paid}|--||Tables:contains
 Paid}|--||Item:contains
 Item}|--||Category:contains
-reservedTable}|--||Table:contains
-Paid}|--||PaymentMethod:contains
+reservedTable}|--||Tables:contains
+Paid}|--||PaymentMethods:contains
 User}|--||permissionSettings:allows

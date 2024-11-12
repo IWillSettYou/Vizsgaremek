@@ -12,7 +12,7 @@ User{
 
 permissionSettings{
     int id PK
-    string section
+    string section UK
 }
 
 Tables{
@@ -22,17 +22,17 @@ Tables{
 
 PaymentMethods{
     int id PK
-    string name 
+    string name UK
 }
 
 Category{
     int id PK
-    string name
+    string name UK
 }
 
 Item{
     int id PK
-    string name
+    string name UK
     int price
     int categoryId FK
 }
@@ -45,7 +45,7 @@ Paid{
     DateTime paidAt
 }
 
-Order{
+Orders{
     int id PK
     int tableId FK
     int itemId FK
@@ -62,6 +62,13 @@ ReservedTable{
     DateTime reservedUntil 
 }
 
+OpeningHours{
+    int id PK
+    string dayName UK
+    DateTime fromHour
+    DateTime untilHour
+}
+
 Sessions{
     string id PK
     int userId FK
@@ -69,8 +76,8 @@ Sessions{
     DateTime expires
 }
 
-Order}|--||Item:contains
-Order}|--||Tables:contains
+Orders}|--||Item:contains
+Orders}|--||Tables:contains
 Paid}|--||Tables:contains
 Paid}|--||Item:contains
 Item}|--||Category:contains

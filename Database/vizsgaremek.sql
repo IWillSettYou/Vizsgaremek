@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 12, 2024 at 07:31 PM
+-- Generation Time: Dec 12, 2024 at 12:31 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -110,12 +110,12 @@ CREATE TABLE `orders` (
 --
 
 INSERT INTO `orders` (`id`, `tableId`, `itemId`, `isDone`, `isServed`, `orderedAt`) VALUES
-(68, 1, 38, 0, 0, '2024-11-12 17:53:32'),
-(69, 1, 37, 0, 0, '2024-11-12 17:53:32'),
+(68, 1, 38, 1, 0, '2024-11-12 17:53:32'),
+(69, 1, 37, 1, 0, '2024-11-12 17:53:32'),
 (70, 1, 36, 0, 1, '2024-11-12 17:53:32'),
 (71, 1, 36, 0, 1, '2024-11-12 18:11:57'),
-(72, 1, 37, 0, 0, '2024-11-12 18:11:57'),
-(73, 1, 38, 0, 0, '2024-11-12 18:11:57'),
+(72, 1, 37, 1, 0, '2024-11-12 18:11:57'),
+(73, 1, 38, 1, 0, '2024-11-12 18:11:57'),
 (74, 2, 38, 1, 1, '2024-11-12 18:12:25'),
 (75, 2, 37, 1, 1, '2024-11-12 18:12:25'),
 (76, 1, 36, 0, 1, '2024-11-12 18:13:08'),
@@ -125,22 +125,31 @@ INSERT INTO `orders` (`id`, `tableId`, `itemId`, `isDone`, `isServed`, `orderedA
 (80, 2, 37, 1, 1, '2024-11-12 18:32:04'),
 (81, 2, 38, 1, 1, '2024-11-12 18:32:04'),
 (82, 2, 37, 1, 1, '2024-11-12 18:32:04'),
-(83, 1, 37, 0, 0, '2024-11-12 18:32:09'),
-(84, 1, 38, 0, 0, '2024-11-12 18:32:09'),
+(83, 1, 37, 1, 0, '2024-11-12 18:32:09'),
+(84, 1, 38, 1, 0, '2024-11-12 18:32:09'),
 (85, 1, 37, 1, 1, '2024-11-12 18:32:09'),
 (86, 1, 36, 0, 1, '2024-11-12 18:32:09'),
 (87, 1, 36, 0, 1, '2024-11-12 18:32:09'),
 (88, 1, 36, 0, 1, '2024-11-12 18:32:33'),
-(89, 1, 37, 0, 0, '2024-11-12 18:32:33'),
-(90, 1, 38, 0, 0, '2024-11-12 18:32:33'),
+(89, 1, 37, 1, 0, '2024-11-12 18:32:33'),
+(90, 1, 38, 1, 0, '2024-11-12 18:32:33'),
 (91, 2, 36, 0, 1, '2024-11-12 18:33:21'),
 (92, 2, 36, 0, 1, '2024-11-12 18:33:21'),
-(93, 1, 38, 0, 0, '2024-11-12 18:34:14'),
+(93, 1, 38, 1, 0, '2024-11-12 18:34:14'),
 (94, 1, 38, 1, 0, '2024-11-12 18:34:14'),
 (95, 1, 38, 1, 0, '2024-11-12 18:34:14'),
 (96, 1, 38, 1, 0, '2024-11-12 18:34:14'),
 (97, 1, 38, 1, 0, '2024-11-12 18:34:14'),
-(98, 1, 36, 0, 1, '2024-11-12 18:45:55');
+(98, 1, 36, 0, 1, '2024-11-12 18:45:55'),
+(99, 12, 36, 0, 0, '2024-12-10 10:14:22'),
+(100, 12, 37, 1, 0, '2024-12-10 10:14:22'),
+(101, 12, 37, 1, 0, '2024-12-10 10:14:22'),
+(102, 12, 38, 1, 0, '2024-12-10 10:14:22'),
+(103, 1, 36, 0, 0, '2024-12-10 10:30:32'),
+(104, 1, 36, 0, 0, '2024-12-10 10:30:32'),
+(105, 1, 37, 1, 0, '2024-12-10 10:30:32'),
+(106, 1, 37, 1, 0, '2024-12-10 10:30:32'),
+(108, 1, 38, 0, 0, '2024-12-10 10:30:32');
 
 -- --------------------------------------------------------
 
@@ -191,6 +200,7 @@ CREATE TABLE `permissionsettings` (
 
 INSERT INTO `permissionsettings` (`id`, `section`) VALUES
 (1, 'admin'),
+(15, 'anyád'),
 (2, 'cashier'),
 (3, 'chef'),
 (4, 'waiter');
@@ -218,7 +228,8 @@ INSERT INTO `reservedtable` (`id`, `name`, `numberOfCustomers`, `tableId`, `rese
 (7, 'Jani', 65, 1, '2024-11-03 12:00:00', '2024-11-03 14:00:00'),
 (9, 'asd', 5, 1, '2024-11-03 14:00:00', '2024-11-03 16:00:00'),
 (11, 'asd', 5, 1, '2024-11-03 17:00:00', '2024-11-03 18:00:00'),
-(14, 'Janika', 5, 1, '2024-11-03 09:00:00', '2024-11-03 10:00:00');
+(14, 'Janika', 5, 1, '2024-11-03 09:00:00', '2024-11-03 10:00:00'),
+(15, 'asdasdasd', 12, 14, '2024-12-11 14:00:00', '2024-12-11 20:00:00');
 
 -- --------------------------------------------------------
 
@@ -238,7 +249,8 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `userId`, `ip`, `expires`) VALUES
-('4ec861bf-4f98-45cb-99f0-1d069c76757a', 11, '::1', '2024-11-11 12:14:41');
+('4ec861bf-4f98-45cb-99f0-1d069c76757a', 11, '::1', '2024-11-11 12:14:41'),
+('891a8af9-c0b4-4542-ab8c-a282c366e872', 22, '::ffff:127.0.0.1', '2024-12-11 10:44:22');
 
 -- --------------------------------------------------------
 
@@ -257,7 +269,21 @@ CREATE TABLE `tables` (
 
 INSERT INTO `tables` (`id`, `tableNumber`) VALUES
 (1, 1),
-(2, 2);
+(2, 2),
+(3, 3),
+(4, 4),
+(5, 5),
+(6, 6),
+(7, 7),
+(8, 8),
+(9, 9),
+(10, 10),
+(11, 11),
+(12, 12),
+(13, 13),
+(14, 14),
+(15, 15),
+(16, 16);
 
 -- --------------------------------------------------------
 
@@ -279,7 +305,11 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `name`, `email`, `hashedPassword`, `permissionId`, `createdAt`) VALUES
-(11, 'admin', 'admin@admin', '$2b$10$LDiEu4BJXGwygTSSnJuKvO4ZQr1/sS.aS6MX45KFzoYqj30LcMvb6', 1, '2024-11-08 19:03:06');
+(11, 'admin', 'admin@admin', '$2b$10$LDiEu4BJXGwygTSSnJuKvO4ZQr1/sS.aS6MX45KFzoYqj30LcMvb6', 1, '2024-11-08 19:03:06'),
+(19, 'cashier', 'cashier@cashier.com', '$2b$10$oKFpxfpCCCtgYaBU2hcwX.hAF2kyxebUD/RYqDE2Am6cuxlvhz5ry', 2, '2024-12-10 10:15:37'),
+(20, 'chef', 'chef@chef.com', '$2b$10$e7y6dyqCQBMoH6wqZqHiluPDewKKHJmZy4DbKYB0m0pIONwAZJ3hy', 3, '2024-12-10 10:15:55'),
+(21, 'waiter', 'waiter@waiter.com', '$2b$10$8VOplGmh2.JlWpS5Wenr9uq8UCKtF76FFUT5vKDcAcfiUpd0yZFUu', 4, '2024-12-10 10:16:07'),
+(22, 'admin', 'admin@admin.com', '$2b$10$GhjGkZpdKFMcNcvl2Ez3rO44yY9.uOAoBIjFQwR1Jnu2robPq8MKS', 1, '2024-12-10 10:16:21');
 
 --
 -- Indexes for dumped tables
@@ -393,7 +423,7 @@ ALTER TABLE `openinghours`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=99;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=109;
 
 --
 -- AUTO_INCREMENT for table `paid`
@@ -411,13 +441,13 @@ ALTER TABLE `paymentmethods`
 -- AUTO_INCREMENT for table `permissionsettings`
 --
 ALTER TABLE `permissionsettings`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `reservedtable`
 --
 ALTER TABLE `reservedtable`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `tables`
@@ -429,7 +459,7 @@ ALTER TABLE `tables`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- Constraints for dumped tables
